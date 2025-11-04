@@ -10,6 +10,11 @@ public class ShowHint : MonoBehaviour
         Debug.Log("Hint panel shown");
     }
 
+    public void HideHintPanel()
+    {
+        hintPanel.SetActive(false);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
