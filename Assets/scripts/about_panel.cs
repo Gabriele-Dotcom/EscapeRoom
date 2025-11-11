@@ -15,5 +15,6 @@ public class about_panel : MonoBehaviour
     public void HideAbout()
     {
         aboutPanel.SetActive(false);
+        
     }
 }
