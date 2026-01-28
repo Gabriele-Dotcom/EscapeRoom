@@ -14,13 +14,17 @@ public class InputHandler : MonoBehaviour
     {
         if(!context.started) return;
 
-        var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-        if(!rayHit.collider) return;
-
-        rayHit.collider.GetComponent<ShowHint>()?.ShowHintPanel();
-        //rayHit.collider.GetComponent<ShowHint>()?.HideHintPanel();
-
-        Debug.Log(rayHit.collider.gameObject.name);
+        RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue()));
+        if (!rayHit.collider)
+        {
+            Debug.Log("Niente di interessante");
+            return;
+        }
+        else if (rayHit.collider.CompareTag("Hint"))
+        {
+            rayHit.collider.GetComponent<ShowHint>()?.ShowHintPanel();
+            Debug.Log(rayHit.collider.gameObject.name);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

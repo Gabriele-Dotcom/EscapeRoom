@@ -5,13 +5,13 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadNewLevel(string toLoad)
     {
-        if (!Application.CanStreamedLevelBeLoaded(toLoad))
-        {
-            Debug.LogError("Scene doesn't exist");
-        }
-        else
+        try
         {
             SceneManager.LoadScene(toLoad);
+        }
+        catch(System.Exception)
+        {
+            Debug.LogError("Scene doesn't exist");
         }
     }
 
