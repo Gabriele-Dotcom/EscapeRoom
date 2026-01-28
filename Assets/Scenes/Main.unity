@@ -2247,9 +2247,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Title: Lost In Time\r\nVersion: 1.0\r\n\xA9 2025 six team / Paradiso
-    Leonardo, Peluso Antonia, Presago Gabriele, Semeraro Cosimo.\nMade with Unity
-    Engine\nAdditional tools: GIMP, GitHub, "
+  m_text: "Game Title: Lost In Time\r\nVersion: 1.0\r\n\xA9 2025 six team / Peluso
+    Antonia, Presago Gabriele, Semeraro Cosimo.\nMade with Unity Engine\nAdditional
+    tools: GIMP, GitHub, "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
   m_sharedMaterial: {fileID: 2076388868076768578, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
