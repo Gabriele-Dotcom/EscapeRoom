@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 public class Switch_scene : MonoBehaviour
 {
     public GameObject e;
+    public GameObject T;
     public string NomeScena;
     void CambiaScena()
     {
+       
         SceneManager.LoadScene(NomeScena);
     }
     public void Transizione()
     {
+        T.SetActive(false);
         e.SetActive(true);
         Image img = e.GetComponent<Image>();
         //Transizione

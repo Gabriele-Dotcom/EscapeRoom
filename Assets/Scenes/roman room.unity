@@ -2001,8 +2001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::timerscript
   GameOver_panel: {fileID: 1709483716}
   timertext: {fileID: 683459418}
-  Duration: 60
-  currentTime: 60
+  Duration: 5
 --- !u!114 &683459421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,6 +2015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
   e: {fileID: 956513310}
+  T: {fileID: 683459416}
   NomeScena: Main
 --- !u!1 &712420412
 GameObject:
@@ -3323,7 +3323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
   e: {fileID: 956513310}
-  NomeScena: 
+  T: {fileID: 683459416}
+  NomeScena: 1500
 --- !u!4 &1491433754
 Transform:
   m_ObjectHideFlags: 0
@@ -3887,6 +3888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
   e: {fileID: 956513310}
+  T: {fileID: 683459416}
   NomeScena: Main
 --- !u!1 &1779855656
 GameObject:

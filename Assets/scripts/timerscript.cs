@@ -39,8 +39,13 @@ public class timerscript : MonoBehaviour
                 openGameOverPanel();
             }
         }
- 
-  
+
+    public void StopTimerAndFinish()
+    {
+        isTimerRunning = false; // Ferma il ciclo while
+        StopAllCoroutines();    // Blocca immediatamente la coroutine
+        Debug.Log("Timer fermato per vittoria!");
+    }
 
     void openGameOverPanel()
     {
@@ -61,5 +66,6 @@ public class timerscript : MonoBehaviour
             Debug.LogError("Attenzione: non ho trovato lo script Switch_scene sull'oggetto GameOver_panel!");
         }
     }
+
 
 }
