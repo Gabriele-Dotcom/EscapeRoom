@@ -11,27 +11,40 @@ public class timerscript : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI timertext;
 
-    [SerializeField] float Duration, currentTime;
-void Start()
+    [SerializeField] float Duration;
+    private float currentTime;
+    private bool isTimerRunning = false; // variabile per controllare se il timer è in esecuzione
+
+   
+    void Start()
 {
-    GameOver_panel.SetActive(false);
-    currentTime = Duration; 
-    timertext.text = currentTime.ToString();
-    StartCoroutine(timeIEn());
-}
+        GameOver_panel.SetActive(false);
+        currentTime = Duration;
+        isTimerRunning = true;
+        StartCoroutine(timeIEn());
+    }
     IEnumerator timeIEn()
     {
-        while (currentTime >= 0)
+
+        while (currentTime > 0 && isTimerRunning)
         {
-            timertext.text = currentTime.ToString();
-            yield return new WaitForSeconds(1f);
-            currentTime--;
+            // Aggiorna il testo formattandolo (es. senza decimali)
+            timertext.text = Mathf.CeilToInt(currentTime).ToString();
+            // Sottrae il tempo passato tra i frame (più preciso di 1f)
+            currentTime -= Time.deltaTime;
+            yield return null;
         }
-        openGameOverPanel();
-    }
+        if (isTimerRunning) // Se non è stato fermato manualmente
+            {
+                openGameOverPanel();
+            }
+        }
+ 
+  
 
     void openGameOverPanel()
     {
+        isTimerRunning = false; // ferma il timer
         timertext.text = "0"; // Pulisce il testo del timer
         GameOver_panel.SetActive(true); // Mostra il pannello con la scritta Game Over
 
