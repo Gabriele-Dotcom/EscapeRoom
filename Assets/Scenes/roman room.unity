@@ -2936,17 +2936,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-<<<<<<< Updated upstream
     x: -0.5911779
     y: -0.92250925
     width: 2.1828105
     height: 2.8465998
-=======
-    x: -0.2838542
-    y: -0.7516919
-    width: 2.5
-    height: 2.248829
->>>>>>> Stashed changes
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
