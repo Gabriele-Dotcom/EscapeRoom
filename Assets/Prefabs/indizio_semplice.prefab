@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7790875467368187058}
   - component: {fileID: 5735285209012048846}
   m_Layer: 5
-  m_Name: testo indizio
+  m_Name: indizio pergamena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Chi ha scritto le righe ha mutato il testo\nspostando ogni lettera di
+    uguale misura nell\u2019alfabeto.\nIndividua lo spostamento e il messaggio originale
+    tornera' leggibile"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
   m_sharedMaterial: {fileID: 2076388868076768578, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
