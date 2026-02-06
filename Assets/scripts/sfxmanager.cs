@@ -1,47 +1,54 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class sfxmanager : MonoBehaviour
 {
     [Header("Configurazione Audio")]
-    public AudioSource sfxSource;   // l' AudioManager/Mixer Source
-    public AudioClip soundEffect;   // Il suono specifico 
+    public AudioClip soundEffect;   // Il suono da riprodurre
+    [Range(0f, 0.5f)]
+    public float pitchVariation = 0.1f; // +/- variazione del pitch
 
-    [Range(0.8f, 1.2f)]
-    public float pitchRange = 0.1f; // Variabilità del suono
+    private AudioSource audioSource;
 
-    void Start()
+    void Awake()
     {
-        // Se è un bottone UI, si collega da solo
+        // Prende l'AudioSource dall'oggetto o lo crea se non presente
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+
+        // Se c'è un bottone UI sullo stesso oggetto, collega automaticamente PlaySFX
         Button btn = GetComponent<Button>();
-        if (btn != null)
+        
+       if (btn != null)
         {
             btn.onClick.AddListener(PlaySFX);
-        }
-
-        // Se non hai trascinato l'AudioSource, lo cerca nell'AudioManager
-        if (sfxSource == null)
-        {
-            // Cerca l'oggetto chiamato "AudioManager" e prende la sua AudioSource
-            GameObject am = GameObject.Find("AudioManager");
-            if (am != null) sfxSource = am.GetComponent<AudioSource>();
-        }
+        } 
     }
 
-    // Questa funzione può essere chiamata da QUALSIASI COSA (script, eventi, animazioni)
+    /// <summary>
+    /// Riproduce il suono con una leggera variazione di pitch
+    /// </summary>
     public void PlaySFX()
     {
-        if (sfxSource != null && soundEffect != null)
-        {
-            // Applica una leggera variazione per non annoiare l'orecchio
-            float randomPitch = Random.Range(1f - pitchRange, 1f + pitchRange);
-            sfxSource.pitch = randomPitch;
-
-            sfxSource.PlayOneShot(soundEffect);
-        }
-        else
+        if (soundEffect == null || audioSource == null)
         {
             Debug.LogWarning($"Manca AudioClip o AudioSource su {gameObject.name}");
+            return;
         }
+
+        // Variazione casuale del pitch per rendere il suono più naturale
+        audioSource.pitch = Random.Range(1f - pitchVariation, 1f + pitchVariation);
+        audioSource.PlayOneShot(soundEffect);
+    }
+
+    /// <summary>
+    /// Permette di assegnare un AudioClip da codice e riprodurlo subito
+    /// </summary>
+    public void PlaySFX(AudioClip clip)
+    {
+        if (clip == null) return;
+        audioSource.pitch = Random.Range(1f - pitchVariation, 1f + pitchVariation);
+        audioSource.PlayOneShot(clip);
     }
 }

@@ -61,6 +61,7 @@ public class InputHandler : MonoBehaviour
         {
             rayHit.collider.GetComponent<ShowHint>()?.ShowHintPanel();
             Debug.Log(rayHit.collider.gameObject.name);
+
         }
     }
 
