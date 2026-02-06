@@ -483,10 +483,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.7
-    y: -0.58000004
-    width: 2.3999999
-    height: 2.16
+    x: -0.25807187
+    y: -0.9344598
+    width: 2.1828105
+    height: 2.764977
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -532,19 +532,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1808055017144385081, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.8429
+      value: 3.7573373
       objectReference: {fileID: 0}
     - target: {fileID: 1808055017144385081, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3993
+      value: 4.0821633
       objectReference: {fileID: 0}
     - target: {fileID: 1808055017144385081, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2705703
+      value: -1.9108
       objectReference: {fileID: 0}
     - target: {fileID: 1808055017144385081, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94295
+      value: 0.1409
       objectReference: {fileID: 0}
     - target: {fileID: 1808055017144385081, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_LocalPosition.z
@@ -590,6 +590,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4657027513368524065, guid: 4baf5930f02f00c44b8cf3d81644e06e, type: 3}
+    - target: {fileID: 1965936801093912236, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965936801093912236, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965936801093912236, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965936801093912236, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1965936801093912236, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1729,10 +1745,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9dc1369fb1c573f41a001b539f101d1f, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4db7b87411574da4383ded365f5164c4, type: 3}
+  m_Resource: {fileID: 8300000, guid: 14856c9d01b7818488eac751d2b8ebe7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.7
+  m_Pitch: 0.2
   Loop: 1
   Mute: 0
   Spatialize: 0
