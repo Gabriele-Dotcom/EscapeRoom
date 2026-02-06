@@ -483,10 +483,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.25807187
-    y: -0.9344598
+    x: -0.5911779
+    y: -0.93103445
     width: 2.1828105
-    height: 2.764977
+    height: 2.8647215
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -848,6 +848,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &679217996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+  m_PrefabInstance: {fileID: 1399857535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &749946938 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6136736430519835178, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
@@ -910,6 +921,10 @@ PrefabInstance:
     - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_Name
       value: indizio libreria
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6136736430519835178, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: hintPanel
@@ -1096,10 +1111,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideHintPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00036340396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000003822366
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.010523182
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99994457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 102.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866728580618233560, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 179.958
+      objectReference: {fileID: 0}
     - target: {fileID: 5735285209012048846, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_text
-      value: "\u201CCodice Atlantico di Leonardo Da vinci (1478)\u201D si trova nella
-        sezione \u25C9(R) invece di \u201C\u25EF\u201D(C)"
+      value: .C id ecevni R enoizes allen avort is "ocitnaltA ecidoC" icniV ad odranoeL
+        otalager ah im ehc aipoc aL
       objectReference: {fileID: 0}
     - target: {fileID: 5735285209012048846, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_fontSize
@@ -1121,6 +1172,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5735285209012048846, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281611327
+      objectReference: {fileID: 0}
     - target: {fileID: 6740247651814747205, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1128,6 +1183,10 @@ PrefabInstance:
     - target: {fileID: 6805035071352496739, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Name
       value: pergamena tavolo (aperta)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805035071352496739, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Pivot.x
@@ -1203,11 +1262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -311.7935
+      value: -275
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.767822
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1296,12 +1355,25 @@ PrefabInstance:
       value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 3221449957789824630, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: TestoDaMostrare
+      value: 
+      objectReference: {fileID: 679217996}
+    - target: {fileID: 3221449957789824630, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: ListaIndizi.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3221449957789824630, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: 'ListaIndizi.Array.data[0]'
-      value: abadbaada
+      value: 'tic...tac.. sai che Leonardo da Vinci scriveva tutto specchiato? tic..tac..tic..tac..  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221449957789824630, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: 'ListaIndizi.Array.data[1]'
+      value: Tic..tac.. ti piace il mio nuovo alfabeto? tic..tac..
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221449957789824630, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: 'ListaIndizi.Array.data[2]'
+      value: Tic..tac..pensa che.. tic..tac.. dovresti... tic..tac.. guardare la
+        libreria!
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_Pivot.x
@@ -1345,7 +1417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 190
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1365,11 +1437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -441
+      value: -212
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -183
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 6077460368382331139, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1390,6 +1462,38 @@ PrefabInstance:
     - target: {fileID: 6260064949162900301, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideHintPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_margin.x
+      value: -33.947166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_margin.z
+      value: -127.30592
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2076388868076768578, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
+    - target: {fileID: 7203642021896193847, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7212523123713479986, guid: 0a2303afbaf7b114dbf59bd9afcfe401, type: 3}
       propertyPath: m_Name
@@ -1465,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_Name
       value: indizio quadretto
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6136736430519835178, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: hintPanel
@@ -1584,11 +1692,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5735285209012048846, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_text
-      value: "A= \u2022               N= \u26A1\nB= \xAC              O= \u2665\nC=
-        \u2666              P= \u2261\nD= \u02D9\u1D55\u02D9            Q= \u2190\nE: 
-        +              R= \u21E7\nF= \u2610              S= \xF7\nG= \u2026           
-        T= =\nH= \u2126             U= [\nI= \u2020               V= II\nL= \xBB             
-        Z= !!\nM= \u2021"
+      value: "A= \u2022         N= fulmine\nB= \xAC        O= \u2665\nC= \u2666       
+        P= \u2261\nD= \u02D9\u1D55\u02D9      Q= \u2190\nE:  +        R= \u2191 \nF=
+        \u2610       S= \xF7\nG= \u2026      T= =\nH= \u2126      U= [\nI= \u2020      
+        V= II\nL= \xBB      Z= !!\nM= \u2021"
       objectReference: {fileID: 0}
     - target: {fileID: 6740247651814747205, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Sprite
@@ -1875,20 +1982,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 85.3666
+      value: 56.5127
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 41.0004
+      value: 35.7542
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 202
+      value: 144.66562
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -170
+      value: -95.57863
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Pivot.x
@@ -1916,11 +2031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 481.288
+      value: 236.85
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 489.203
+      value: 362.01
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_LocalScale.x
@@ -1964,11 +2079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000030518
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -111
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 8670618405777692548, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2125,6 +2240,10 @@ PrefabInstance:
     - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_Name
       value: indizio pergamena (chiusa)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3929759717565670826, guid: 40496c3de98a8ca43b728f6db3a1a039, type: 3}
       propertyPath: m_TagString

@@ -197,7 +197,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u0254 \u0131p \u01DD\u0254\u01DD\u028Cu\u0131 \u0279 \u01DDuo\u0131z\u01DDs
+    \u0250ll\u01DDu \u0250\u028Co\u0279\u0287 \u0131s (6741) \u0131\u0254u\u0131\u028C
+    \u0250p op\u0279\u0250uo\u01DDl \u0131p o\u0254\u0131\u0287u\u0250l\u0287\u0250
+    \u01DD\u0254\u0131po\u0254"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
   m_sharedMaterial: {fileID: 2076388868076768578, guid: 892b2eae62a5f22499a37dcb8415e537, type: 2}
