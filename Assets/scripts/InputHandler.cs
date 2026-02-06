@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+/// <summary>
+/// Gestisce l'input utente per l'interazione con oggetti nel mondo 2D.
+/// </summary>
+
 
 public class InputHandler : MonoBehaviour
 {
@@ -10,6 +14,38 @@ public class InputHandler : MonoBehaviour
     {
         _mainCamera = Camera.main;
     }
+    /// <summary>
+    /// Metodo invocato dal sistema di Input (Input Action Asset).
+    /// </summary>
+    /// <remarks>
+    /// \dot
+    /// digraph G {
+    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
+    ///     edge [fontname=Helvetica, fontsize=8];
+    ///     
+    ///     Start [label="onClick Event", shape=ellipse, style=filled, fillcolor=lightgrey];
+    ///     CheckContext [label="context.started?"];
+    ///     Raycast [label="Esegui Raycast 2D"];
+    ///     HitCheck [label="Colpito qualcosa?", shape=diamond];
+    ///     TagCheck [label="Tag è 'Hint'?", shape=diamond];
+    ///     LogEmpty [label="Debug: Niente di interessante"];
+    ///     ShowHint [label="Esegui ShowHintPanel()", style=filled, fillcolor=lightblue];
+    ///     End [label="Fine", shape=ellipse];
+    ///
+    ///     Start -> CheckContext;
+    ///     CheckContext -> End [label="No"];
+    ///     CheckContext -> Raycast [label="Sì"];
+    ///     Raycast -> HitCheck;
+    ///     HitCheck -> LogEmpty [label="No"];
+    ///     HitCheck -> TagCheck [label="Sì"];
+    ///     TagCheck -> ShowHint [label="Sì"];
+    ///     TagCheck -> End [label="No"];
+    ///     LogEmpty -> End;
+    ///     ShowHint -> End;
+    /// }
+    /// \enddot
+    /// </remarks>
+    /// <param name="context">Informazioni sul contesto dell'azione di input.</param>
 
     public void onClick(InputAction.CallbackContext context)
     {

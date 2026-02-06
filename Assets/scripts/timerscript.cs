@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+/// <summary>
+/// Gestisce il conto alla rovescia, il sistema di pausa e l'attivazione del Game Over.
+/// </summary>
 public class timerscript : MonoBehaviour
 {
 
@@ -31,6 +34,26 @@ public class timerscript : MonoBehaviour
 
         StartCoroutine(timeIEn());
     }
+    /// <summary>
+    /// Alterna lo stato di pausa del gioco, agendo sul Time.timeScale.
+    /// </summary>
+    /// <remarks>
+    /// \dot
+    /// digraph G {
+    ///     rankdir=LR;
+    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
+    ///     
+    ///     In [label="TogglePause()", shape=ellipse];
+    ///     Check [label="isPaused?", shape=diamond];
+    ///     PauseOn [label="Time.timeScale = 0\nMostra Panel", style=filled, fillcolor=mistyrose];
+    ///     PauseOff [label="Time.timeScale = 1\nNasconde Panel", style=filled, fillcolor=lightgreen];
+    ///     
+    ///     In -> Check;
+    ///     Check -> PauseOn [label="Vero"];
+    ///     Check -> PauseOff [label="Falso"];
+    /// }
+    /// \enddot
+    /// </remarks>
     public void TogglePause()
     {
         if (panel_pausa == null) return;
@@ -50,6 +73,30 @@ public class timerscript : MonoBehaviour
        
         }
     }
+    /// <summary>
+    /// Coroutine che decrementa il tempo ogni frame.
+    /// </summary>
+    /// <remarks>
+    /// \dot
+    /// digraph G {
+    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
+    ///     
+    ///     Loop [label="Tempo > 0?", shape=diamond];
+    ///     UpdateUI [label="Aggiorna timertext"];
+    ///     Sub [label="Sottrai Time.deltaTime"];
+    ///     Wait [label="yield return null", style=dashed];
+    ///     CheckEnd [label="isTimerRunning && Tempo <= 0?", shape=diamond];
+    ///     GameOver [label="openGameOverPanel()", style=filled, fillcolor=orange];
+    ///
+    ///     Loop -> UpdateUI [label="Sì"];
+    ///     UpdateUI -> Sub -> Wait;
+    ///     Wait -> Loop;
+    ///     Loop -> CheckEnd [label="No"];
+    ///     CheckEnd -> GameOver [label="Sì"];
+    ///     CheckEnd -> Fine [label="No"];
+    /// }
+    /// \enddot
+    /// </remarks>
 
     IEnumerator timeIEn()
     {
@@ -74,6 +121,9 @@ public class timerscript : MonoBehaviour
         StopAllCoroutines();    // Blocca immediatamente la coroutine
         Debug.Log("Timer fermato per vittoria!");
     }
+    /// <summary>
+    /// Attiva il pannello di fine gioco e avvia la transizione scenica.
+    /// </summary>
 
     void openGameOverPanel()
     {
