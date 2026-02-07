@@ -48,7 +48,7 @@ public class sfxmanager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         if (clip == null) return;
-        audioSource.pitch = Random.Range(1f - pitchVariation, 1f + pitchVariation);
+        
         audioSource.PlayOneShot(clip);
     }
 }
