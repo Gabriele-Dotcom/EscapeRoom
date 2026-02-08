@@ -2538,8 +2538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0fbb18d8326ff479824c8410acc9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
-  e: {fileID: 956513310}
-  T: {fileID: 683459416}
+  Cutscene: 0
+  effetto: {fileID: 956513310}
+  tempo: {fileID: 683459416}
   NomeScena: Main
 --- !u!1 &701189997
 GameObject:
@@ -4598,8 +4599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0fbb18d8326ff479824c8410acc9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
-  e: {fileID: 956513310}
-  T: {fileID: 683459416}
+  Cutscene: 0
+  effetto: {fileID: 956513310}
+  tempo: {fileID: 683459416}
   NomeScena: 1500
 --- !u!4 &1491433754
 Transform:
@@ -4748,10 +4750,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.5911779
-    y: -0.88069636
-    width: 2.1828105
-    height: 2.764977
+    x: -1.2477231
+    y: -1.0728863
+    width: 3.4972677
+    height: 3.148688
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5452,8 +5454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0fbb18d8326ff479824c8410acc9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
-  e: {fileID: 956513310}
-  T: {fileID: 683459416}
+  Cutscene: 0
+  effetto: {fileID: 0}
+  tempo: {fileID: 0}
   NomeScena: Main
 --- !u!1 &1779855656
 GameObject:

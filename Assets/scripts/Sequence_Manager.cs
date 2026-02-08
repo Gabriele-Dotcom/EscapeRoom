@@ -9,7 +9,6 @@ using UnityEngine.UIElements;
 /// </summary>
 public class Sequenze : MonoBehaviour
 {
-    int corrette = 0;
     public int MAXcorrette;
     public List<GameObject> listaOggetti = new();
     List<GameObject> listaConfronto = new();
