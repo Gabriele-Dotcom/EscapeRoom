@@ -1,62 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using NaughtyAttributes;
-/// <summary>
-/// Gestisce la transizione visiva tra due scene utilizzando un effetto di dissolvenza.
-/// </summary>
+
 public class Switch_scene : MonoBehaviour
 {
-    public bool Cutscene;
-    /// <summary> Oggetto che contiene l'immagine per la dissolvenza (es. un pannello nero). </summary>
-    [SerializeField] GameObject effetto;
-    /// <summary> Oggetto da disattivare all'inizio della transizione (es. il menu attuale). </summary>
-    [HideIf("Cutscene")]
-    [SerializeField] GameObject tempo;
-    /// <summary> Nome della scena di destinazione. </summary>
-    [SerializeField] string NomeScena;
-    /// <summary>
-    /// Esegue il caricamento effettivo della scena. Metodo richiamato tramite Invoke.
-    /// </summary>
+    public GameObject e;
+    public string nomeScenaDaCaricare;
     void CambiaScena()
     {
-       
-        SceneManager.LoadScene(NomeScena);
+        SceneManager.LoadScene(nomeScenaDaCaricare);
     }
-    /// <summary>
-    /// Avvia la sequenza di transizione: spegne la UI attuale, attiva l'effetto fade e prenota il cambio scena.
-    /// </summary>
-    /// <remarks>
-    /// \dot
-    /// digraph G {
-    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
-    ///     edge [fontname=Helvetica, fontsize=9];
-    ///
-    ///     Start [label="Chiamata Transizione()", shape=ellipse];
-    ///     UI_Toggle [label="T.SetActive(false)\ne.SetActive(true)"];
-    ///     Fade [label="img.CrossFadeAlpha(254, 3s)", style=filled, fillcolor=lightyellow];
-    ///     Timer [label="Invoke('CambiaScena', 3s)", style=filled, fillcolor=lightblue];
-    ///     Wait [label="Attesa 3 secondi...", shape=invhouse, style=dashed];
-    ///     Load [label="SceneManager.LoadScene()", shape=box, style=filled, fillcolor=lightgreen];
-    ///     End [label="Nuova Scena Caricata", shape=ellipse];
-    ///
-    ///     Start -> UI_Toggle;
-    ///     UI_Toggle -> Fade;
-    ///     Fade -> Timer;
-    ///     Timer -> Wait;
-    ///     Wait -> Load;
-    ///     Load -> End;
-    /// }
-    /// \enddot
-    /// </remarks>
     public void Transizione()
     {
-        if(tempo != null)
-            tempo.SetActive(false);
-        effetto.SetActive(true);
-        Image img = effetto.GetComponent<Image>();
+        e.SetActive(true);
+        Image img = e.GetComponent<Image>();
         //Transizione
-        img.CrossFadeAlpha(254.0f, 3.0f, false);  
+        img.CrossFadeAlpha(254.0f, 3.0f, true);
         //Carica nuova scena
         Invoke("CambiaScena", 3.0f);
     }
@@ -64,12 +23,12 @@ public class Switch_scene : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
