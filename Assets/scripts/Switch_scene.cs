@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using NaughtyAttributes;
 /// <summary>
 /// Gestisce la transizione visiva tra due scene utilizzando un effetto di dissolvenza.
 /// </summary>
 public class Switch_scene : MonoBehaviour
 {
+    public bool Cutscene;
     /// <summary> Oggetto che contiene l'immagine per la dissolvenza (es. un pannello nero). </summary>
-    public GameObject e;
+    [SerializeField] GameObject effetto;
     /// <summary> Oggetto da disattivare all'inizio della transizione (es. il menu attuale). </summary>
-    public GameObject T;
+    [HideIf("Cutscene")]
+    [SerializeField] GameObject tempo;
     /// <summary> Nome della scena di destinazione. </summary>
-    public string NomeScena;
+    [SerializeField] string NomeScena;
     /// <summary>
     /// Esegue il caricamento effettivo della scena. Metodo richiamato tramite Invoke.
     /// </summary>
@@ -48,9 +51,10 @@ public class Switch_scene : MonoBehaviour
     /// </remarks>
     public void Transizione()
     {
-        T.SetActive(false);
-        e.SetActive(true);
-        Image img = e.GetComponent<Image>();
+        if(tempo != null)
+            tempo.SetActive(false);
+        effetto.SetActive(true);
+        Image img = effetto.GetComponent<Image>();
         //Transizione
         img.CrossFadeAlpha(254.0f, 3.0f, false);  
         //Carica nuova scena

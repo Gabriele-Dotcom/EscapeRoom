@@ -137,7 +137,7 @@ public class timerscript : MonoBehaviour
         if (scriptScena != null)
         {
             // ATTIVIAMO la sequenza: Fade -> Aspetta 3s -> Cambia Scena
-            scriptScena.Transizione();
+            //scriptScena.Transizione();
         }
         else
         {
