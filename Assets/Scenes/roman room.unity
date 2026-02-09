@@ -2714,7 +2714,7 @@ MonoBehaviour:
   GameOver_panel: {fileID: 1709483716}
   panel_pausa: {fileID: 712695395}
   timertext: {fileID: 683459418}
-  Duration: 3040
+  Duration: 5
 --- !u!114 &683459421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,9 +3207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   ListaIndizi:
-  - abc
-  - dede
-  - nvn
+  - Che piacevole profumo queste candele, vero Sodalis?
+  - Il tappeto sembra un po' strano in quest'angolo
+  - "Forse ho una candela in pi\xF9 nel cassetto"
   TestoDaMostrare: {fileID: 966464021}
 --- !u!1 &804366831
 GameObject:
@@ -5293,8 +5293,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.25807187
-    y: -0.94494444
+    x: -0.5911779
+    y: -0.929063
     width: 2.1828105
     height: 2.8586555
   near clip plane: 0.3
@@ -7258,6 +7258,12 @@ PrefabInstance:
     - target: {fileID: 308116913789439571, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735285209012048846, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_text
+      value: "MANDATO DI GIULIO CESARE:\nMiei fedeli romani, per nascondere le nostre
+        missive ai nemici useremo questo nuovo cifrario. Ogni letter\xE0 verr\xE0
+        sostituita di tre posti nel nostro alfabeto. GLORIA A ROMA!"
       objectReference: {fileID: 0}
     - target: {fileID: 6740247651814747205, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Sprite
