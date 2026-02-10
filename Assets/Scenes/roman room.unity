@@ -2276,7 +2276,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 22632553762f11646945ac25cfb9cf07, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4032,7 +4032,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.569
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4639,7 +4639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8485809137440894061, guid: 5a7b31ed7a821cb49889f7a352d5ec73, type: 3}
+  m_Sprite: {fileID: -5972103180329459941, guid: 8c088ebc982eac74ca7b8ce92830e869, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5620,10 +5620,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.79138625
-    y: -0.6637931
-    width: 2.5841184
-    height: 2.3275862
+    x: -0.5911779
+    y: -0.88069636
+    width: 2.1828105
+    height: 2.764977
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

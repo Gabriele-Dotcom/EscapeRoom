@@ -1240,7 +1240,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5972103180329459941, guid: 8c088ebc982eac74ca7b8ce92830e869, type: 3}
+  m_Sprite: {fileID: 8485809137440894061, guid: 5a7b31ed7a821cb49889f7a352d5ec73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3976,8 +3976,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4db7b87411574da4383ded365f5164c4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1.4
+  m_Volume: 0.65
+  m_Pitch: 1.42
   Loop: 1
   Mute: 0
   Spatialize: 0
