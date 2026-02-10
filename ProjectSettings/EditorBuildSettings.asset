@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1500.unity
     guid: fa6667512dc6b9547a5e0bf527b4a56f
+  - enabled: 1
+    path: Assets/Scenes/1945.unity
+    guid: 1b2d9099146d1d545a8472005fe5109e
+  - enabled: 1
+    path: Assets/Scenes/vittoria.unity
+    guid: f6b7cca36430cf24f8f6ab7718ff4f32
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 811d1cb32d63bda47924f17e8ddb12f9, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

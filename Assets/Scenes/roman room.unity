@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 568701627}
   m_Layer: 5
   m_Name: button_menu
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2526,7 +2526,7 @@ GameObject:
   - component: {fileID: 683459421}
   m_Layer: 5
   m_Name: Timertext
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3120,7 +3120,7 @@ GameObject:
   - component: {fileID: 712695397}
   m_Layer: 5
   m_Name: panel_pausa
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3215,7 +3215,7 @@ GameObject:
   - component: {fileID: 718720668}
   m_Layer: 5
   m_Name: nuvoletta
-  m_TagString: Untagged
+  m_TagString: Hint_open
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5620,10 +5620,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.79138625
+    y: -0.6637931
+    width: 2.5841184
+    height: 2.3275862
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5955,7 +5955,7 @@ GameObject:
   - component: {fileID: 1647492079}
   m_Layer: 0
   m_Name: stanzaromana_0
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6812,7 +6812,7 @@ GameObject:
   - component: {fileID: 1909047954}
   m_Layer: 5
   m_Name: floor_view
-  m_TagString: Untagged
+  m_TagString: Hint_open
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7138,7 +7138,7 @@ GameObject:
   - component: {fileID: 2079508339}
   m_Layer: 5
   m_Name: opentablet
-  m_TagString: Untagged
+  m_TagString: Hint_open
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7578,7 +7578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3061074688564311864, guid: a58b4238d9bf1ef429161ae3b0580abe, type: 3}
       propertyPath: m_TagString
-      value: Hint
+      value: Hint_open
       objectReference: {fileID: 0}
     - target: {fileID: 5410893858231929870, guid: a58b4238d9bf1ef429161ae3b0580abe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -7651,6 +7651,10 @@ PrefabInstance:
     - target: {fileID: 5990370791755305654, guid: a58b4238d9bf1ef429161ae3b0580abe, type: 3}
       propertyPath: m_Name
       value: open drawer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990370791755305654, guid: a58b4238d9bf1ef429161ae3b0580abe, type: 3}
+      propertyPath: m_TagString
+      value: Hint_open
       objectReference: {fileID: 0}
     - target: {fileID: 6829487107373004086, guid: a58b4238d9bf1ef429161ae3b0580abe, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -7746,6 +7750,10 @@ PrefabInstance:
     - target: {fileID: 6805035071352496739, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805035071352496739, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
+      propertyPath: m_TagString
+      value: Hint_open
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_AnchoredPosition.x

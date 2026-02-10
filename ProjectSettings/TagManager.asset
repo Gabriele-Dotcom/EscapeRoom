@@ -7,11 +7,14 @@ TagManager:
   - Candela
   - Hint
   - Sequence
+  - Hint_open
+  - UI
+  - Background
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - sfondo
   - Water
   - UI
   - 

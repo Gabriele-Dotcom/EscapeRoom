@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 /// <summary>
 /// Gestisce l'input utente per l'interazione con oggetti nel mondo 2D.
 /// </summary>
@@ -52,6 +53,11 @@ public class InputHandler : MonoBehaviour
         if(!context.started) return;
 
         RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue()));
+        /*if(rayHit.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
+        {
+            GameObject HintAperti = GameObject.FindGameObjectWithTag("Hint_open");
+            if (HintAperti != null) HintAperti.SetActive(false); else Debug.Log("Nessun pannello hint aperto da chiudere");
+        }*/
         if (!rayHit.collider)
         {
             Debug.Log("Niente di interessante");
@@ -61,7 +67,6 @@ public class InputHandler : MonoBehaviour
         {
             rayHit.collider.GetComponent<ShowHint>()?.ShowHintPanel();
             Debug.Log(rayHit.collider.gameObject.name);
-
         }
     }
 
