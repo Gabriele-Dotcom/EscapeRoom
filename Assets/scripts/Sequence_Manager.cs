@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 /// <summary>
 /// Gestisce la validazione di una sequenza di oggetti selezionati dall'utente.
 /// </summary>
@@ -58,17 +56,5 @@ public class Sequenze : MonoBehaviour
             else
                 listaConfronto.Clear();
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
