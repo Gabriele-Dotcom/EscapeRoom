@@ -52,10 +52,8 @@ public class Sequenze : MonoBehaviour
             {
                 Debug.Log("Sequenza Corretta");
                 eventoFineSequenza.Invoke();
-                listaConfronto.Clear();
             }
-            else
-                listaConfronto.Clear();
+            listaConfronto.Clear();
         }
     }
 }
