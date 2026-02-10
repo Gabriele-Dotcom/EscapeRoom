@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class Switch_scene : MonoBehaviour
 {
-    public GameObject e;
-    public GameObject pannelloVittoria;
-    public string nomeScenaDaCaricare;
+    public GameObject e = null;
+    public GameObject pannelloVittoria = null;
+    public string nomeScenaDaCaricare = null;
     void CambiaScena()
     {
         SceneManager.LoadScene(nomeScenaDaCaricare);

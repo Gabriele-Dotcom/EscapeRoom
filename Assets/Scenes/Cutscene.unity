@@ -586,10 +586,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -1.2477231
-    y: -1.0728863
-    width: 3.4972677
-    height: 3.148688
+    x: -0.79138625
+    y: -0.6637931
+    width: 2.5841184
+    height: 2.3275862
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1024,10 +1024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0fbb18d8326ff479824c8410acc9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
-  Cutscene: 1
-  effetto: {fileID: 1319735866}
-  tempo: {fileID: 0}
-  NomeScena: roman room
+  e: {fileID: 1319735866}
+  pannelloVittoria: {fileID: 0}
+  nomeScenaDaCaricare: roman room
 --- !u!4 &1695446352
 Transform:
   m_ObjectHideFlags: 0
