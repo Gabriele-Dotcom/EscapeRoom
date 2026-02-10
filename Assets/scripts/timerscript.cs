@@ -5,52 +5,111 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+
 /// <summary>
-/// Gestisce il conto alla rovescia, il sistema di pausa e l'attivazione del Game Over.
+/// Gestisce il conto alla rovescia, il sistema di pausa
+/// e l'attivazione della schermata di Game Over.
 /// </summary>
 public class timerscript : MonoBehaviour
 {
-
+    /// <summary>
+    /// Pannello mostrato quando il tempo scade (Game Over).
+    /// </summary>
     [SerializeField] GameObject GameOver_panel;
 
+    /// <summary>
+    /// Pannello della pausa di gioco.
+    /// </summary>
     [SerializeField] GameObject panel_pausa;
 
+    /// <summary>
+    /// Riferimento al testo UI che visualizza il tempo rimanente.
+    /// </summary>
     [SerializeField] TextMeshProUGUI timertext;
 
+    /// <summary>
+    /// Durata iniziale del timer.
+    /// </summary>
     [SerializeField] float Duration;
 
+    /// <summary>
+    /// Tempo corrente rimanente.
+    /// </summary>
     private float currentTime;
-    private bool isTimerRunning = false; // variabile per controllare se il timer è in esecuzione
-    private bool isPaused = false; // Stato della pausa
 
+    /// <summary>
+    /// Indica se il timer è attualmente in esecuzione.
+    /// </summary>
+    private bool isTimerRunning = false;
+
+    /// <summary>
+    /// Stato attuale della pausa.
+    /// </summary>
+    private bool isPaused = false;
+
+    /// <summary>
+    /// Inizializzazione del timer e dei pannelli UI.
+    /// Avvia la coroutine del conto alla rovescia.
+    /// </summary>
+    /// <remarks>
+    /// \dot
+    /// digraph G {
+    ///     rankdir=TB;
+    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
+    ///
+    ///     Start [label="Start()", shape=ellipse];
+    ///     HideGO [label="GameOver_panel.SetActive(false)"];
+    ///     HidePause [label="panel_pausa.SetActive(false)?", shape=diamond];
+    ///     InitTime [label="currentTime = Duration"];
+    ///     SetRun [label="isTimerRunning = true"];
+    ///     ResetScale [label="Time.timeScale = 1"];
+    ///     StartCo [label="StartCoroutine(timeIEn)"];
+    ///     End [label="Fine", shape=ellipse];
+    ///
+    ///     Start -> HideGO -> HidePause -> InitTime -> SetRun -> ResetScale -> StartCo -> End;
+    /// }
+    /// \enddot
+    /// </remarks>
     void Start()
     {
         GameOver_panel.SetActive(false);
-        if (panel_pausa != null) panel_pausa.SetActive(false); // Assicurati che parta chiuso
+
+        if (panel_pausa != null)
+            panel_pausa.SetActive(false);
 
         currentTime = Duration;
         isTimerRunning = true;
-        Time.timeScale = 1f; // Resetta il tempo all'avvio
+        Time.timeScale = 1f;
 
         StartCoroutine(timeIEn());
     }
+
     /// <summary>
-    /// Alterna lo stato di pausa del gioco, agendo sul Time.timeScale.
+    /// Alterna lo stato di pausa del gioco,
+    /// agendo sul Time.timeScale e sulla UI.
     /// </summary>
     /// <remarks>
     /// \dot
     /// digraph G {
     ///     rankdir=LR;
     ///     node [shape=rect, fontname=Helvetica, fontsize=10];
-    ///     
+    ///
     ///     In [label="TogglePause()", shape=ellipse];
+    ///     CheckNull [label="panel_pausa == null?", shape=diamond];
+    ///     Toggle [label="isPaused = !isPaused"];
     ///     Check [label="isPaused?", shape=diamond];
-    ///     PauseOn [label="Time.timeScale = 0\nMostra Panel", style=filled, fillcolor=mistyrose];
-    ///     PauseOff [label="Time.timeScale = 1\nNasconde Panel", style=filled, fillcolor=lightgreen];
-    ///     
-    ///     In -> Check;
+    ///     PauseOn [label="Time.timeScale = 0\nMostra panel_pausa", style=filled, fillcolor=mistyrose];
+    ///     PauseOff [label="Time.timeScale = 1\nNasconde panel_pausa", style=filled, fillcolor=lightgreen];
+    ///     End [label="Fine", shape=ellipse];
+    ///
+    ///     In -> CheckNull;
+    ///     CheckNull -> End [label="Sì"];
+    ///     CheckNull -> Toggle [label="No"];
+    ///     Toggle -> Check;
     ///     Check -> PauseOn [label="Vero"];
     ///     Check -> PauseOff [label="Falso"];
+    ///     PauseOn -> End;
+    ///     PauseOff -> End;
     /// }
     /// \enddot
     /// </remarks>
@@ -62,81 +121,107 @@ public class timerscript : MonoBehaviour
 
         if (isPaused)
         {
-            Time.timeScale = 0f; // Blocca il tempo e il timer
+            Time.timeScale = 0f;
             panel_pausa.SetActive(true);
-            
         }
         else
         {
-            Time.timeScale = 1f; // Riprende il tempo
+            Time.timeScale = 1f;
             panel_pausa.SetActive(false);
-       
         }
     }
+
     /// <summary>
-    /// Coroutine che decrementa il tempo ogni frame.
+    /// Coroutine che decrementa il tempo rimanente
+    /// aggiornando il testo UI ogni frame.
     /// </summary>
     /// <remarks>
     /// \dot
     /// digraph G {
     ///     node [shape=rect, fontname=Helvetica, fontsize=10];
-    ///     
-    ///     Loop [label="Tempo > 0?", shape=diamond];
+    ///
+    ///     Loop [label="currentTime > 0 && isTimerRunning?", shape=diamond];
     ///     UpdateUI [label="Aggiorna timertext"];
-    ///     Sub [label="Sottrai Time.deltaTime"];
+    ///     Sub [label="currentTime -= Time.deltaTime"];
     ///     Wait [label="yield return null", style=dashed];
-    ///     CheckEnd [label="isTimerRunning && Tempo <= 0?", shape=diamond];
+    ///     CheckEnd [label="isTimerRunning && currentTime <= 0?", shape=diamond];
     ///     GameOver [label="openGameOverPanel()", style=filled, fillcolor=orange];
+    ///     End [label="Fine", shape=ellipse];
     ///
     ///     Loop -> UpdateUI [label="Sì"];
     ///     UpdateUI -> Sub -> Wait;
     ///     Wait -> Loop;
     ///     Loop -> CheckEnd [label="No"];
     ///     CheckEnd -> GameOver [label="Sì"];
-    ///     CheckEnd -> Fine [label="No"];
+    ///     CheckEnd -> End [label="No"];
     /// }
     /// \enddot
     /// </remarks>
-
     IEnumerator timeIEn()
     {
-
         while (currentTime > 0 && isTimerRunning)
         {
-            // Aggiorna il testo formattandolo (es. senza decimali)
             timertext.text = Mathf.CeilToInt(currentTime).ToString();
-            // Sottrae il tempo passato tra i frame (più preciso di 1f)
             currentTime -= Time.deltaTime;
             yield return null;
         }
-        if (isTimerRunning && currentTime <= 0) // Se non è stato fermato manualmente
-            {
-                openGameOverPanel();
-            }
-        }
 
+        if (isTimerRunning && currentTime <= 0)
+        {
+            openGameOverPanel();
+        }
+    }
+
+    /// <summary>
+    /// Ferma il timer in caso di vittoria,
+    /// bloccando immediatamente la coroutine.
+    /// </summary>
     public void StopTimerAndFinish()
     {
-        isTimerRunning = false; // Ferma il ciclo while
-        StopAllCoroutines();    // Blocca immediatamente la coroutine
+        isTimerRunning = false;
+        StopAllCoroutines();
         Debug.Log("Timer fermato per vittoria!");
     }
-    /// <summary>
-    /// Attiva il pannello di fine gioco e avvia la transizione scenica.
-    /// </summary>
 
+    /// <summary>
+    /// Attiva il pannello di Game Over
+    /// e avvia la transizione di cambio scena.
+    /// </summary>
+    /// <remarks>
+    /// \dot
+    /// digraph G {
+    ///     rankdir=TB;
+    ///     node [shape=rect, fontname=Helvetica, fontsize=10];
+    ///
+    ///     In [label="openGameOverPanel()", shape=ellipse];
+    ///     StopTimer [label="isTimerRunning = false"];
+    ///     ResetText [label="timertext = 0"];
+    ///     ShowPanel [label="GameOver_panel.SetActive(true)"];
+    ///     GetSwitch [label="GetComponent<Switch_scene>()"];
+    ///     Check [label="scriptScena != null?", shape=diamond];
+    ///     Transition [label="scriptScena.Transizione()", style=filled, fillcolor=lightblue];
+    ///     Error [label="Debug.LogError"];
+    ///     End [label="Fine", shape=ellipse];
+    ///
+    ///     In -> StopTimer -> ResetText -> ShowPanel -> GetSwitch;
+    ///     GetSwitch -> Check;
+    ///     Check -> Transition [label="Sì"];
+    ///     Check -> Error [label="No"];
+    ///     Transition -> End;
+    ///     Error -> End;
+    /// }
+    /// \enddot
+    /// </remarks>
     void openGameOverPanel()
     {
-        isTimerRunning = false; // ferma il timer
-        timertext.text = "0"; // Pulisce il testo del timer
-        GameOver_panel.SetActive(true); // Mostra il pannello con la scritta Game Over
+        isTimerRunning = false;
+        timertext.text = "0";
+        GameOver_panel.SetActive(true);
 
-        // Cerchiamo lo script Switch_scene sul GameOver_panel
         Switch_scene scriptScena = GameOver_panel.GetComponent<Switch_scene>();
 
         if (scriptScena != null)
         {
-            // ATTIVIAMO la sequenza: Fade -> Aspetta 3s -> Cambia Scena
             scriptScena.Transizione();
         }
         else
@@ -144,6 +229,4 @@ public class timerscript : MonoBehaviour
             Debug.LogError("Attenzione: non ho trovato lo script Switch_scene sull'oggetto GameOver_panel!");
         }
     }
-
-
 }
