@@ -7,10 +7,10 @@ using UnityEngine.Events;
 /// </summary>
 public class Sequenze : MonoBehaviour
 {
-    public int MAXcorrette;
-    public List<GameObject> listaOggetti = new();
+    [SerializeField] List<GameObject> listaOggetti = new();
     List<GameObject> listaConfronto = new();
-    public UnityEvent eventoFineSequenza;
+    [SerializeField] UnityEvent eventoFineSequenza;
+    [SerializeField] GameObject ErroreSequenza = null;
     public void ConfrontaSequenze(GameObject obj)
     /// <summary>
     /// Aggiunge un oggetto alla sequenza corrente e verifica se corrisponde alla soluzione.
@@ -46,6 +46,7 @@ public class Sequenze : MonoBehaviour
     {
         //Debug.Log("La lista contiene " + listaOggetti.Count + " elementi.");
         listaConfronto.Add(obj);
+        foreach (GameObject obj1 in listaConfronto) Debug.Log(obj1.name);
         if (listaConfronto.Count == listaOggetti.Count)
         {
             if (listaConfronto.SequenceEqual(listaOggetti))
@@ -53,7 +54,16 @@ public class Sequenze : MonoBehaviour
                 Debug.Log("Sequenza Corretta");
                 eventoFineSequenza.Invoke();
             }
+            else
+            {
+                ErroreSequenza.SetActive(true);
+                Invoke("StopMessaggioErrore", 4.0f);
+            }
             listaConfronto.Clear();
         }
+    }
+    private void StopMessaggioErrore()
+    {
+        ErroreSequenza.SetActive(false);
     }
 }
