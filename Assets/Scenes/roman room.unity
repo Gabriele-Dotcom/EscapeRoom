@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 35716695}
   - component: {fileID: 35716699}
   - component: {fileID: 35716700}
-  - component: {fileID: 35716702}
   - component: {fileID: 35716701}
   m_Layer: 0
   m_Name: closed scroll
@@ -347,21 +346,7 @@ PolygonCollider2D:
       - {x: -0.515, y: -1.12}
       - {x: -0.48499998, y: -1.04}
   m_UseDelaunayMesh: 0
---- !u!114 &35716701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35716694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6606bd84d2d9cf84eb73aaf8306eee25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::sfxmanager
-  soundEffect: {fileID: 0}
-  pitchVariation: 0
---- !u!82 &35716702
+--- !u!82 &35716701
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,7 +360,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: e762caafe8360c44e9ea335bfdb212c2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2192,7 +2177,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 22632553762f11646945ac25cfb9cf07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1.05
+  m_Pitch: 0.2
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -3368,9 +3353,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9dc1369fb1c573f41a001b539f101d1f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1.02
+  m_Pitch: 0.2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4664,8 +4649,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.5911779
-    y: -0.88069636
+    x: -0.25807187
+    y: -0.9344598
     width: 2.1828105
     height: 2.764977
   near clip plane: 0.3
