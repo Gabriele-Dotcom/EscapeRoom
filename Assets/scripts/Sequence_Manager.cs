@@ -48,7 +48,7 @@ public class Sequenze : MonoBehaviour
     {
         //Debug.Log("La lista contiene " + listaOggetti.Count + " elementi.");
         listaConfronto.Add(obj);
-        if (listaConfronto.Count == 3)
+        if (listaConfronto.Count == listaOggetti.Count)
         {
             if (listaConfronto.SequenceEqual(listaOggetti))
             {
