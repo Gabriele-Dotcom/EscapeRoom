@@ -360,7 +360,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: e762caafe8360c44e9ea335bfdb212c2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2177,7 +2177,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 22632553762f11646945ac25cfb9cf07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -3704,7 +3704,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5291,9 +5291,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: -0.5911779
-    y: -0.929063
+    y: -0.88069636
     width: 2.1828105
-    height: 2.8586555
+    height: 2.764977
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

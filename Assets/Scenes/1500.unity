@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VolumeManager
   mixer: {fileID: 24100000, guid: 9dc1369fb1c573f41a001b539f101d1f, type: 2}
-  volumeSlider: {fileID: 0}
+  volumeSlider: {fileID: 271006560}
 --- !u!4 &361588671
 Transform:
   m_ObjectHideFlags: 0
@@ -1342,9 +1342,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: -0.5911779
-    y: -0.929063
+    y: -0.88069636
     width: 2.1828105
-    height: 2.8586555
+    height: 2.764977
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1426,7 +1426,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4582,7 +4582,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 14856c9d01b7818488eac751d2b8ebe7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -5033,7 +5033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6805035071352496739, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244914404124583315, guid: 3690e810c3ba5bc49bfa7d1831d1a092, type: 3}
       propertyPath: m_Pivot.x
