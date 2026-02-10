@@ -10,6 +10,7 @@ public class VolumeManager : MonoBehaviour
     public AudioMixer mixer;
     public Slider volumeSlider;
     private string mixerParameter = "VolumeGenerale";
+    private string sfxParam = "VolumeSFX";  
     /// <summary>
     /// Inizializza il volume all'avvio caricando i dati salvati.
     /// </summary>
@@ -87,5 +88,6 @@ public class VolumeManager : MonoBehaviour
         // Converte 0-1 in decibel (-80 a 0)
         float dB = Mathf.Log10(Mathf.Clamp(valore, 0.0001f, 1f)) * 20;
         mixer.SetFloat(mixerParameter, dB);
+        mixer.SetFloat(sfxParam, dB);
     }
 }

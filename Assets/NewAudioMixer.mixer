@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-720836271068558720
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ee3b2e1dd5ed8c74187fbb7550d85be1
+  m_Children: []
+  m_Volume: 254b644ab2ba02c4ba8255c62515215a
+  m_Pitch: 9a294b1e7267708498c674233d723437
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 7496824690543648689}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -18,9 +37,12 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 48e93e22239052849aec20921172af82
     name: VolumeGenerale
+  - guid: 254b644ab2ba02c4ba8255c62515215a
+    name: VolumeSFX
   m_AudioMixerGroupViews:
   - guids:
     - e302e211a8e526740847f0c54ac60aaf
+    - ee3b2e1dd5ed8c74187fbb7550d85be1
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -33,7 +55,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e302e211a8e526740847f0c54ac60aaf
-  m_Children: []
+  m_Children:
+  - {fileID: -720836271068558720}
   m_Volume: 48e93e22239052849aec20921172af82
   m_Pitch: 17bdde984db26794d8716d205b8c5d5c
   m_Send: 00000000000000000000000000000000
@@ -82,6 +105,7 @@ AudioMixerSnapshotController:
     868958a9ee981d84584ab23d23fb5604: 5
     da9d092a2413c7c48a821d80d7826bb2: 613
     0791403a80c839046a60a67b1872655a: 200
+    254b644ab2ba02c4ba8255c62515215a: 2
     03cb866a48ab68e438e0be52e4c75980: 0
     839b659a9b87a5245830ae49ec6c6da2: 619
     6f48692c9ea289a4887fd0644ee1f414: 4.54
@@ -90,3 +114,17 @@ AudioMixerSnapshotController:
     e7c0b90f0c481e94e9f2edd0ebb01cce: 0
     3e8efe8f63d0c804587a8ef5281b32c3: 0.045
   m_TransitionOverrides: {}
+--- !u!244 &7496824690543648689
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 78daa576c65fb554687833337aed7914
+  m_EffectName: Attenuation
+  m_MixLevel: 7ba566cf91a25a84a8180348c1eac396
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
