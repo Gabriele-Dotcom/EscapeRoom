@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Switch_scene : MonoBehaviour
 {
     public GameObject e;
+    public GameObject pannelloVittoria;
     public string nomeScenaDaCaricare;
     void CambiaScena()
     {
@@ -12,12 +13,17 @@ public class Switch_scene : MonoBehaviour
     }
     public void Transizione()
     {
-        e.SetActive(true);
-        Image img = e.GetComponent<Image>();
-        //Transizione
-        img.CrossFadeAlpha(254.0f, 3.0f, true);
-        //Carica nuova scena
-        Invoke("CambiaScena", 3.0f);
+        // 1. Attiva il pannello (che contiene sfondo, scritte, icone, ecc.)
+        if (pannelloVittoria != null)
+        {
+            pannelloVittoria.SetActive(true);
+            e.SetActive(true);
+            Image img = e.GetComponent<Image>();
+            //Transizione
+            img.CrossFadeAlpha(254.0f, 3.0f, true);
+            //Carica nuova scena
+            Invoke("CambiaScena", 3.0f);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
