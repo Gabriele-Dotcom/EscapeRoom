@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5a7b31ed7a821cb49889f7a352d5ec73
+guid: 8c088ebc982eac74ca7b8ce92830e869
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8485809137440894061
-    second: gino 1945_0
+      213: -5972103180329459941
+    second: soldato_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gino 1945_0
+      name: soldato_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 6
+        x: 378
+        y: 511
         width: 44
-        height: 95
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6cade46376a3c570800000000000000
-      internalID: 8485809137440894061
+      spriteID: b1f5b7e8cc3de1da0800000000000000
+      internalID: -5972103180329459941
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gino 1945_0: 8485809137440894061
+      soldato_0: -5972103180329459941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
