@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Switch_scene
   e: {fileID: 1427848509}
   pannelloVittoria: {fileID: 932051215}
-  nomeScenaDaCaricare: Main
+  nomeScenaDaCaricare: 1945
 --- !u!4 &441902666
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,10 +1440,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.25807187
-    y: -0.9344598
-    width: 2.1828105
-    height: 2.764977
+    x: -0.13255209
+    y: -0.042592593
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5175,7 +5175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.30895996, y: 1.0877075}
+  m_AnchoredPosition: {x: -0.30895996, y: 1.0876465}
   m_SizeDelta: {x: -1066.7954, y: -473.12915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626174236
@@ -5793,7 +5793,7 @@ MonoBehaviour:
   GameOver_panel: {fileID: 1626174231}
   panel_pausa: {fileID: 670320950}
   timertext: {fileID: 1741082358}
-  Duration: 3040
+  Duration: 300
 --- !u!114 &1741082358
 MonoBehaviour:
   m_ObjectHideFlags: 0
