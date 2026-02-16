@@ -2443,10 +2443,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1747246050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9167917, y: 0.89825934}
-  m_AnchorMax: {x: 0.9497397, y: 0.94935197}
-  m_AnchoredPosition: {x: -3.1999512, y: -1.2998047}
-  m_SizeDelta: {x: -2.8000488, y: -16.644165}
+  m_AnchorMin: {x: 0.94286317, y: 0.90031964}
+  m_AnchorMax: {x: 0.99654764, y: 0.9914399}
+  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_SizeDelta: {x: -0.000038147, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476549518
 MonoBehaviour:
@@ -3355,10 +3355,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.59090906
+    y: -0.8797954
+    width: 2.181818
+    height: 2.7621484
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
